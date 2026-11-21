@@ -173,7 +173,7 @@ python -m playwright install chromium
 Na pasta do projeto, execute:
 
 ```bash
-python 01_skills/instalar_skills.py
+python 02_criador-de-sites/01_skills/instalar_skills.py
 ```
 
 Depois, reinicie a sessão do Claude Code para carregar as skills instaladas.
@@ -242,7 +242,7 @@ novyra/
 └── requirements.txt
 ```
 
-A estrutura acima representa o núcleo do Criador de Sites. Arquivos de referência de terceiros, capturas de origem, credenciais e projetos locais podem ser excluídos da publicação por motivos de licença, privacidade ou tamanho.
+A estrutura preserva `01_pesquisa/` na raiz e o Criador de Sites dentro de `02_criador-de-sites/`. Essa organização é necessária: o instalador e a skill `expert-asimov` usam caminhos relativos entre essas pastas. A pasta `04_sites/` e os materiais de referência externos ficam fora da publicação por padrão.
 
 ## Limites conhecidos desta versão
 
