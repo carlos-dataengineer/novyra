@@ -76,7 +76,7 @@ sequenceDiagram
 
 ## Aprendizado e base de conhecimento: situação desta publicação
 
-A skill `expert-asimov` descreve um ciclo de consulta e registro de aprendizados, com distinção entre conteúdo de fontes, correções do usuário, preferências e experiências do próprio expert. O pacote ZIP recebido, porém, não contém a pasta complementar `01_pesquisa` para a qual a skill aponta.
+A skill `expert-asimov` descreve um ciclo de consulta e registro de aprendizados, com distinção entre conteúdo de fontes, correções do usuário, preferências e experiências do próprio expert. O pacote publicado inclui a pasta complementar `01_pesquisa`, com índice temático, sínteses, resumos de vídeos e caderno de aprendizados.
 
 Por esse motivo, a base de conhecimento e o ciclo de aprendizado não devem ser considerados instalados e validados nesta publicação. A integração precisa ser incluída e testada em uma atualização específica.
 
