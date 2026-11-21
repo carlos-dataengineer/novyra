@@ -192,6 +192,12 @@ novyra/
 ├── README.md
 ├── VERSION
 ├── CHANGELOG.md
+├── 01_pesquisa/
+│   └── canal-asimov-expert/
+│       ├── INDICE.md
+│       ├── caixas/
+│       ├── videos/
+│       └── aprendizados/
 ├── 01_skills/
 │   ├── criar-site/
 │   ├── wireframe/
@@ -218,7 +224,7 @@ Quero deixar claro o que esta primeira publicação representa:
 - A saída principal documentada do Criador de Sites é HTML e CSS, com JavaScript opcional; não é um construtor visual hospedado nem uma plataforma SaaS pronta.
 - O uso depende do Claude Code e das skills instaladas.
 - A geração de imagens via OpenRouter é opcional, externa e pode gerar custos.
-- O pacote enviado para esta documentação contém a pasta do Criador de Sites. A base complementar de pesquisa e conhecimento referenciada pela skill `expert-asimov` não veio neste ZIP; por isso, essa parte precisa ser adicionada e validada separadamente antes de ser anunciada como plenamente pronta.
+- O pacote original também contém a base complementar de pesquisa em `01_pesquisa/`, com sínteses temáticas, resumos de vídeos e caderno de aprendizados. A integração operacional da skill `expert-asimov` ainda precisa ser testada no ambiente Claude Code.
 - O projeto ainda não foi validado integralmente em diferentes máquinas, navegadores e cenários.
 
 ## Privacidade e segurança
