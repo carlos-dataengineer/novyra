@@ -16,7 +16,7 @@ Algumas tarefas também usam Playwright. A geração de imagens é opcional e de
 Abra o terminal na pasta do projeto e execute:
 
 ```bash
-cd 02_criador-de-sites\npython -m pip install -r requirements.txt
+cd 02_criador-de-sites\npython -m pip install -r 02_criador-de-sites/requirements.txt
 ```
 
 Para os fluxos de captura com Playwright, instale o navegador:
