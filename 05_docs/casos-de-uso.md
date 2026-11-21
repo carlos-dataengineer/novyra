@@ -61,7 +61,7 @@ A NOVYRA foi pensada para apoiar quem precisa transformar uma ideia ou referênc
 **Como usar:**
 
 ```bash
-python 02_scripts/validar_site.py 04_sites/meu-site
+python 02_criador-de-sites/02_scripts/validar_site.py 02_criador-de-sites/04_sites/meu-site
 ```
 
 O validador procura problemas como arquivos ausentes, caminhos que saem da pasta do site, estilos ou scripts inline e referências a frameworks/CDNs não permitidos pelas regras do projeto.
@@ -72,10 +72,10 @@ O validador procura problemas como arquivos ausentes, caminhos que saem da pasta
 
 **Ferramentas:**
 
-- `recortar.py`: cria grades e recortes para localizar regiões.
-- `amostrar_cores.py`: identifica cores e paletas.
-- `capturar_tela.py`: gera uma captura do site.
-- `comparar.py`: mostra diferenças entre referência e resultado.
+- `02_criador-de-sites/02_scripts/recortar.py`: cria grades e recortes para localizar regiões.
+- `02_criador-de-sites/02_scripts/amostrar_cores.py`: identifica cores e paletas.
+- `02_criador-de-sites/02_scripts/capturar_tela.py`: gera uma captura do site.
+- `02_criador-de-sites/02_scripts/comparar.py`: mostra diferenças entre referência e resultado.
 
 A medição ajuda a encontrar problemas, mas a decisão final continua sendo visual e humana.
 
