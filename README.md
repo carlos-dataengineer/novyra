@@ -162,7 +162,7 @@ Os scripts Python apoiam o trabalho visual e técnico:
 Instale as dependências:
 
 ```bash
-python -m pip install -r requirements.txt
+python -m pip install -r 02_criador-de-sites/requirements.txt
 python -m playwright install chromium
 ```
 
