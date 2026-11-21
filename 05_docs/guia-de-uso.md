@@ -135,4 +135,4 @@ Confira a chave OpenRouter, a conexão, os limites da conta e se a chamada foi a
 
 ## 11. Observação sobre a skill expert-asimov
 
-A skill `expert-asimov` depende de uma base complementar em `../01_pesquisa/canal-asimov-expert/`. Essa pasta não veio no ZIP utilizado para esta publicação. Até que ela seja adicionada e validada, trate essa skill como documentação de integração pendente, não como recurso pronto para uso.
+A skill `expert-asimov` depende de uma base complementar em `../01_pesquisa/canal-asimov-expert/`. A pasta de pesquisa está incluída no repositório. Ainda assim, é necessário testar a instalação da skill e a resolução dos caminhos no Claude Code antes de considerar o fluxo validado.
