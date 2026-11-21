@@ -28,6 +28,32 @@ A primeira versão pública está sendo disponibilizada como **experimental**. A
 
 > **NOVYRA — Create Beyond Limits.**
 
+## Exemplos visuais do que a NOVYRA pode criar
+
+As imagens abaixo são **conceitos ilustrativos** criados para mostrar a direção visual que a NOVYRA busca explorar. Elas não são capturas de sites já gerados ou provas de funcionalidades executadas. São referências de resultado e inspiração para novos projetos.
+
+### 1. Landing pages e sites futuristas
+
+![Exemplo conceitual de landing page futurista](assets/examples/landing-futurista.svg)
+
+Uma página de apresentação com portal dimensional, fundo atmosférico, elementos translúcidos, chamadas de ação e composição responsiva.
+
+### 2. Dashboards e painéis de dados
+
+![Exemplo conceitual de dashboard futurista](assets/examples/dashboard-analytics.svg)
+
+Um painel de análise com indicadores, gráficos, cartões de métricas e visualização de dados em uma interface escura com detalhes neon.
+
+### 3. Estúdios criativos e galerias digitais
+
+![Exemplo conceitual de estúdio criativo](assets/examples/creative-studio.svg)
+
+Uma interface para explorar conceitos, imagens, projetos e elementos visuais, com espaço para organizar referências e acompanhar a criação.
+
+[Ver a galeria de exemplos](05_docs/exemplos-visuais.md)
+
+---
+
 ## O que a NOVYRA faz nesta versão
 
 O pacote recebido e documentado nesta versão concentra-se no Criador de Sites. Ele transforma uma imagem de referência ou um briefing em um site estático, construído em etapas e com pontos de aprovação do usuário.
