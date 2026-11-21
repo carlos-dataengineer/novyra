@@ -16,6 +16,8 @@ Uma ferramenta de criação assistida por IA, com foco especial em sites e inter
 
 ---
 
+> **Estado desta publicação:** esta primeira etapa colocou no repositório a apresentação e a documentação da NOVYRA. O conteúdo executável do pacote ZIP (skills, scripts, templates e base de pesquisa) ainda não foi enviado. Portanto, este repositório ainda não deve ser tratado como um pacote instalável ou uma distribuição completa.
+
 ## Sobre o projeto
 
 Eu criei a NOVYRA com uma ideia central: usar inteligência artificial para transformar referências, imagens e ideias em experiências digitais bem construídas, com identidade visual própria e atenção aos detalhes.
