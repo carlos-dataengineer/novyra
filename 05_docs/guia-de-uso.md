@@ -16,7 +16,7 @@ Algumas tarefas também usam Playwright. A geração de imagens é opcional e de
 Abra o terminal na pasta do projeto e execute:
 
 ```bash
-python -m pip install -r requirements.txt
+cd 02_criador-de-sites\npython -m pip install -r requirements.txt
 ```
 
 Para os fluxos de captura com Playwright, instale o navegador:
@@ -32,7 +32,7 @@ O projeto também documenta uso do Chrome ou Edge já instalado para capturas. S
 Na raiz da pasta do Criador de Sites:
 
 ```bash
-python 01_skills/instalar_skills.py
+python 02_criador-de-sites/01_skills/instalar_skills.py
 ```
 
 Depois, reinicie a sessão do Claude Code para que as skills apareçam.
@@ -84,12 +84,12 @@ Use apenas referências que você tem autorização para analisar. A identidade 
 Todos os scripts podem exibir suas opções com `--help`.
 
 ```bash
-python 02_scripts/novo_site.py meu-site --imagem "C:/mocks/tela.png"
-python 02_scripts/recortar.py 04_sites/meu-site/reference.png --grade 100
-python 02_scripts/amostrar_cores.py 04_sites/meu-site/reference.png --caixa 0,0,1440,80 --paleta 6
-python 02_scripts/capturar_tela.py 04_sites/meu-site --igual-referencia
-python 02_scripts/comparar.py 04_sites/meu-site/reference.png 04_sites/meu-site/_capturas/captura-1440x900.png --lado-a-lado
-python 02_scripts/validar_site.py 04_sites/meu-site
+python 02_criador-de-sites/02_scripts/novo_site.py meu-site --imagem "C:/mocks/tela.png"
+python 02_criador-de-sites/02_scripts/recortar.py 04_sites/meu-site/reference.png --grade 100
+python 02_criador-de-sites/02_scripts/amostrar_cores.py 04_sites/meu-site/reference.png --caixa 0,0,1440,80 --paleta 6
+python 02_criador-de-sites/02_scripts/capturar_tela.py 04_sites/meu-site --igual-referencia
+python 02_criador-de-sites/02_scripts/comparar.py 04_sites/meu-site/reference.png 04_sites/meu-site/_capturas/captura-1440x900.png --lado-a-lado
+python 02_criador-de-sites/02_scripts/validar_site.py 04_sites/meu-site
 ```
 
 ## 8. Geração opcional de imagens
@@ -122,7 +122,7 @@ A aprovação humana faz parte do método. Não é necessário aceitar um result
 Confira se o instalador foi executado sem erro e reinicie a sessão.
 
 ### O Python não encontra uma biblioteca
-Instale novamente as dependências com `python -m pip install -r requirements.txt`.
+Instale novamente as dependências com `cd 02_criador-de-sites\npython -m pip install -r requirements.txt`.
 
 ### A captura não abre ou falha
 Confira se Edge ou Chrome está instalado e se o navegador está acessível. Para fluxos Playwright, execute `python -m playwright install chromium`.
@@ -135,4 +135,4 @@ Confira a chave OpenRouter, a conexão, os limites da conta e se a chamada foi a
 
 ## 11. Observação sobre a skill expert-asimov
 
-A skill `expert-asimov` depende de uma base complementar em `../01_pesquisa/canal-asimov-expert/`. A pasta de pesquisa está incluída no repositório. Ainda assim, é necessário testar a instalação da skill e a resolução dos caminhos no Claude Code antes de considerar o fluxo validado.
+A skill `expert-asimov` depende de uma base complementar em `../01_pesquisa/canal-asimov-expert/`. A base de pesquisa está organizada em `01_pesquisa/`, na raiz do repositório. O Criador de Sites fica em `02_criador-de-sites/`. Essa relação de pastas é necessária para a skill `expert-asimov` localizar os materiais.
