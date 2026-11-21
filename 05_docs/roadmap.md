@@ -11,7 +11,7 @@ Este roadmap registra uma direção de evolução. Os itens futuros são propost
 - [x] Publicar documentação inicial.
 - [ ] Validar a instalação em máquinas diferentes.
 - [ ] Testar todos os fluxos ponta a ponta.
-- [ ] Integrar e validar a base complementar de pesquisa referenciada por `expert-asimov`.
+- [x] Incluir a base complementar de pesquisa em `01_pesquisa/`.\n- [ ] Testar a integração e os caminhos da skill `expert-asimov` no Claude Code.
 
 ## v0.2.0 — Estabilização
 
