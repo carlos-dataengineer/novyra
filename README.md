@@ -9,14 +9,14 @@
 Uma ferramenta de criação assistida por IA, com foco especial em sites e interfaces digitais futuristas.
 
 ![Status experimental](https://img.shields.io/badge/status-experimental-orange)
-![Versão](https://img.shields.io/badge/version-0.1.0-8757FF)
+![Versão](https://img.shields.io/badge/version-0.1.1-8757FF)
 ![Plataforma](https://img.shields.io/badge/platform-Claude%20Code-20D9F5)
 
 </div>
 
 ---
 
-> **Estado desta publicação:** esta primeira etapa colocou no repositório a apresentação e a documentação da NOVYRA. O conteúdo executável do pacote ZIP (skills, scripts, templates e base de pesquisa) ainda não foi enviado. Portanto, este repositório ainda não deve ser tratado como um pacote instalável ou uma distribuição completa.
+> **Estado desta publicação:** esta atualização adiciona uma biblioteca de referências futuristas e três templates HTML autorais. O runtime completo, as skills e a base integral de pesquisa ainda precisam ser sincronizados para que o repositório seja uma distribuição instalável completa.
 
 ## Sobre o projeto
 
@@ -53,6 +53,10 @@ Uma interface para explorar conceitos, imagens, projetos e elementos visuais, co
 [Ver a galeria de exemplos](05_docs/exemplos-visuais.md)
 
 ---
+
+## Biblioteca de referências futuristas
+
+A NOVYRA agora inclui uma [biblioteca de modelos futuristas](02_criador-de-sites/05_docs/biblioteca-modelos-futuristas.md), referências visuais Lusion/DesignRush e três templates independentes em `02_criador-de-sites/03_templates/`. Os exemplos são composições autorais, não cópias dos sites de referência.
 
 ## O que a NOVYRA faz nesta versão
 
