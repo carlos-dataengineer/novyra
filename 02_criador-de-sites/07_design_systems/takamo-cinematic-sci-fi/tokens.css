@@ -1,0 +1,15 @@
+:root {
+  --color-bg: #05070C;
+  --color-surface: #101722;
+  --color-surface-alt: #172432;
+  --color-text: #F5F8FC;
+  --color-muted: #98A7B8;
+  --color-primary: #20D9F5;
+  --color-accent: #8CEEFF;
+  --color-border: rgba(32,217,245,.2);
+  --radius-card: 12px;
+  --container-width: 1200px;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Exo 2', sans-serif;
+  --motion-profile: 'atmospheric and restrained';
+}
