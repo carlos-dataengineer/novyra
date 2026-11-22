@@ -1,0 +1,15 @@
+:root {
+  --color-bg: #06101C;
+  --color-surface: #0D1B2A;
+  --color-surface-alt: #14283A;
+  --color-text: #F2F7FA;
+  --color-muted: #9DB2C1;
+  --color-primary: #19C6CF;
+  --color-accent: #6AE5E0;
+  --color-border: rgba(106,229,224,.18);
+  --radius-card: 14px;
+  --container-width: 1160px;
+  --font-display: 'Manrope', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --motion-profile: 'subtle and purposeful';
+}
