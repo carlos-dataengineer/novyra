@@ -1,0 +1,6 @@
+interface:
+  display_name: "NOVYRA · Wireframe"
+  short_description: "Planta tipada de uma tela em ASCII ou SVG"
+  default_prompt: "Use $wireframe formato=ascii na imagem C:/caminho/tela.png."
+policy:
+  allow_implicit_invocation: false

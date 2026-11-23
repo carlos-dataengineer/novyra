@@ -1,0 +1,6 @@
+interface:
+  display_name: "NOVYRA · Extrair design system"
+  short_description: "Extrai tokens, componentes e catálogo vivo de um site público"
+  default_prompt: "Use $extrair-ds url=https://exemplo.com slug=referencia."
+policy:
+  allow_implicit_invocation: false

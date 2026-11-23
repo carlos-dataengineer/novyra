@@ -1,0 +1,49 @@
+/* Tokens do modelo autoral NOVYRA 'novyra-future-lab' em 2026-11-23.
+   Gerado por extrair_tokens.py. Ajuste em tokens.json e rode de novo com --sem-recalcular. */
+:root {
+  /* cores */
+  --bg: #080b16;
+  --surface: #11172a;
+  --text: #e5e7f0;
+  --text-muted: #a7b0c4;
+  --accent: #8757ff;
+  --on-accent: #05070c;
+  --border: rgba(135,87,255,.25);
+  --surface-alt: #1a2340;
+  --accent-2: #20d9f5;
+
+  /* tipografia */
+  --font-title: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --fs-h1: 64px; --fw-h1: 600; --lh-h1: 1.02; --ls-h1: -0.03em;
+  --fs-h2: 44px; --fw-h2: 600; --lh-h2: 1.1; --ls-h2: -0.03em;
+  --fs-h3: 28px; --fw-h3: 600; --lh-h3: 1.2; --ls-h3: 0em;
+  --fs-t1: 17px; --fw-t1: 400; --lh-t1: 1.6; --ls-t1: 0em;
+  --fs-t2: 14px; --fw-t2: 400; --lh-t2: 1.5; --ls-t2: 0em;
+  --fs-t3: 12px; --fw-t3: 500; --lh-t3: 1.3; --ls-t3: 0.08em;
+
+  /* formas */
+  --radius-sm: 6px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 0 0 rgba(32, 217, 245, 0.08) inset;
+  --shadow-md: 0 12px 40px -12px rgba(135, 87, 255, 0.45);
+  --shadow-lg: 0 0 0 1px rgba(135, 87, 255, 0.35), 0 24px 80px -24px rgba(135, 87, 255, 0.6);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* movimento */
+  --dur-fast: 120ms;
+  --dur-base: 220ms;
+  --dur-slow: 480ms;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --focus-ring: 2px #20d9f5;
+}

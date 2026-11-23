@@ -1,0 +1,25 @@
+name: Sugerir uma melhoria / Feature request
+description: Uma ideia para o NOVYRA
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: Qual problema isso resolve? / What problem does it solve?
+    validations:
+      required: true
+  - type: textarea
+    id: ideia
+    attributes:
+      label: Como você imagina a solução / Proposed solution
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options: [Skills, Templates, Design systems, Scripts de medição, NOVYRA Studio (painel), Instalador, Documentação]
+  - type: textarea
+    id: extra
+    attributes:
+      label: Referências ou exemplos

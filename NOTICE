@@ -1,0 +1,43 @@
+NOVYRA
+Copyright (c) 2026 Krlos Robertt. Licenciado sob a MIT (veja LICENSE).
+
+Código, skills, templates e design systems deste repositório são autorais.
+Nenhum código, imagem, logo ou texto de terceiros é redistribuído.
+
+Método e atribuição
+------------------------------------------------------------------------
+A metodologia do NOVYRA nasceu de uma pesquisa sobre o conteúdo público da
+Asimov Academy (canal @AsimovAcademy, Vibe Design e a formação AI Designer):
+reunir referências, extrair a linguagem visual em um design system antes do
+código, planejar com wireframe, construir em camadas e revisar comparando com
+a referência. A pesquisa usou apenas material público; nenhuma aula fechada
+foi assistida ou reproduzida.
+
+O código (skills, scripts de medição, catálogo, painel e instaladores) foi
+escrito do zero para este projeto. Nenhum material da Asimov Academy é
+redistribuído aqui.
+
+Repertório visual: Lusion (https://lusion.co) e as galerias da DesignRush
+(futuristic, AI, technology, interactive) foram usados só como referência de
+direção visual. O catálogo runtime/referencias/futuristas.json cita 8 sites
+(Lusion, Takamo Universe/Visuable, DataBahn/Flowtrix, Nature Beyond
+Technology/Ronce Bleue, GLIX Studio/Nockta, Moulds & More/WD Strategies, Bear
+Classes/URich, Alex Gurghis) apenas com nome, link e observações próprias. Nada foi copiado: nem código, nem imagens, logos, textos,
+fontes ou modelos 3D.
+
+Design systems e templates
+------------------------------------------------------------------------
+Os 4 design systems e os 3 templates temáticos são modelos autorais. Não são
+extraídos de nenhum site, e não usam marcas, logos, imagens ou código de
+terceiros. Design systems que você extrair com /extrair-ds ficam só no seu
+computador; a pasta fonte/ (prints e CSS do site de origem) nunca é publicada.
+
+Dependências (instaladas pelo pip, não redistribuídas)
+------------------------------------------------------------------------
+Pillow (MIT-CMU)        https://github.com/python-pillow/Pillow
+Playwright (Apache-2.0) https://github.com/microsoft/playwright-python
+
+Fontes carregadas do Google Fonts em tempo de execução (não redistribuídas):
+Space Grotesk, Inter, Inter Tight, Manrope, Bebas Neue, Exo 2, VT323,
+IBM Plex Mono e JetBrains Mono,
+sob a SIL Open Font License 1.1.

@@ -1,0 +1,6 @@
+interface:
+  display_name: "NOVYRA · Combinar design systems"
+  short_description: "Recombina cores, tipografia, formas e movimento de vários design systems"
+  default_prompt: "Use $combinar-ds nome=minha-marca base=novyra-future-lab tipografia=cinematic-sci-fi."
+policy:
+  allow_implicit_invocation: false

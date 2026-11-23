@@ -1,0 +1,21 @@
+{
+  "name": "novyra",
+  "version": "0.2.0",
+  "description": "Imagem ou ideia vira site HTML + CSS em 5 etapas com aprovação. Skills /criar-site, /wireframe, /extrair-ds, /combinar-ds e /novyra (painel).",
+  "author": {
+    "name": "Krlos Robertt",
+    "url": "https://github.com/carlos-dataengineer"
+  },
+  "homepage": "https://github.com/carlos-dataengineer/novyra",
+  "repository": "https://github.com/carlos-dataengineer/novyra",
+  "license": "MIT",
+  "keywords": [
+    "image-to-html",
+    "website",
+    "design-system",
+    "wireframe",
+    "skills",
+    "codex",
+    "claude-code"
+  ]
+}

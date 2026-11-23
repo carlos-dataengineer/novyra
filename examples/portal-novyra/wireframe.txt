@@ -1,0 +1,27 @@
+Wireframe · portal-novyra · referência: reference.jpg (736x1308, arte de fundo)
+A arte não é uma tela de interface: ela vira o FUNDO do hero, e a interface é
+desenhada por cima, na paleta medida da própria arte.
+
+Desktop 1440 (arte à direita)               Celular 390–736 (arte atrás do hero)
+┌ nav ───────────────────────────────────┐  ┌ nav ─────────────────────┐
+│ [logo: NOVYRA]  [lnk][lnk][lnk] [btn2] │  │ [logo: NOVYRA]    [btn2] │
+├ hero ──────────────────┬ hero-arte ────┤  ├ hero (arte por trás) ────┤
+│ [t3: Imagem → site]    │               │  │                          │
+│ [h1: Crie além dos     │   (vórtice)   │  │       (vórtice)          │
+│      limites.]         │               │  │ [t3] [h1] [t1]           │
+│ [t1: subtítulo]        │               │  │ [btn] [btn2]             │
+│ [btn] [btn2]           │               │  │ ┌ cmd ────────────────┐  │
+│ ┌ cmd ───────────────┐ │               │  │ │ [t2: curl … | bash] │  │
+│ │ [t2: curl … | bash]│ │               │  │ └─────────────────────┘  │
+│ └────────────────────┘ │               │  ├ etapas ──────────────────┤
+├ etapas ────────────────┴───────────────┤  │ [h2] card ×5 (1 coluna)  │
+│ [t3] [h2: 5 etapas, você aprova cada]  │  ├ agentes ─────────────────┤
+│ card ×5 [h3 num][h3][t2]               │  │ card2 ×2                 │
+├ agentes ───────────────────────────────┤  ├ instalar ────────────────┤
+│ card2 [h3: Claude Code][t2][cmd]       │  │ cmd ×2                   │
+│ card2 [h3: Codex][t2][cmd]             │  ├ rodape ──────────────────┤
+├ instalar ──────────────────────────────┤  └──────────────────────────┘
+│ [h2] cmd [bash]  cmd [powershell]      │
+├ rodape ────────────────────────────────┤
+│ [t2: MIT · GitHub]                     │
+└────────────────────────────────────────┘

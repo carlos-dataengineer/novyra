@@ -1,0 +1,6 @@
+interface:
+  display_name: "NOVYRA · Criar site"
+  short_description: "Imagem ou briefing vira site HTML + CSS em 5 etapas com aprovação"
+  default_prompt: "Use $criar-site para transformar a imagem C:/caminho/tela.png no site slug=meu-site."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,6 @@
+interface:
+  display_name: "NOVYRA Studio"
+  short_description: "Abre o painel do NOVYRA: montador de comandos, templates, design systems e sites"
+  default_prompt: "Use $novyra para abrir o NOVYRA Studio e listar meus sites."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,54 @@
+name: Relatar um erro / Report a bug
+description: Algo não funciona como deveria
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Obrigado por avisar. Quanto mais detalhes, mais rápido dá para corrigir.
+  - type: textarea
+    id: oque
+    attributes:
+      label: O que aconteceu / What happened
+      description: Descreva o erro e o que você esperava ver.
+    validations:
+      required: true
+  - type: textarea
+    id: passos
+    attributes:
+      label: Como reproduzir / Steps to reproduce
+      placeholder: |
+        1. Rodei /criar-site imagem="..." slug=...
+        2. Na etapa 2...
+        3. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: onde
+    attributes:
+      label: Onde você usa / Where
+      multiple: true
+      options:
+        - Claude Code (terminal)
+        - Claude Code (app desktop ou IDE)
+        - Codex (CLI)
+        - Codex (IDE)
+        - Instalador
+        - NOVYRA Studio (painel)
+    validations:
+      required: true
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Skill
+      multiple: true
+      options: [criar-site, wireframe, extrair-ds, combinar-ds, novyra, scripts]
+  - type: input
+    id: ambiente
+    attributes:
+      label: Sistema, Python e navegador
+      placeholder: Windows 11, Python 3.12, Chrome 131
+  - type: textarea
+    id: extra
+    attributes:
+      label: Capturas de tela, ESTADO.md ou mensagens de erro
+      description: Não anexe imagens de telas internas ou confidenciais.

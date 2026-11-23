@@ -1,0 +1,27 @@
+# Chaves e segredos
+.env
+
+# Sites criados ficam no computador de cada pessoa (~/Novyra/sites)
+runtime/sites/*
+!runtime/sites/.gitkeep
+
+# Design systems: a pasta fonte/ tem prints e CSS de sites de terceiros
+runtime/design-systems/*/fonte/
+runtime/design-systems/*/_capturas/
+runtime/design-systems/teste-*/
+
+# Saídas geradas
+_capturas/
+*.grade.png
+runtime/novyra.html
+runtime/novyra-artefato.html
+dist/
+
+# Python / sistema
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# Capturas dos exemplos (regeneráveis; as principais estão em docs/images)
+examples/*/_capturas/

@@ -1,0 +1,159 @@
+{
+  "titulo": "Referências futuristas",
+  "atualizado_em": "2026-11-23",
+  "aviso": "Só links e observações escritas pelo NOVYRA. Nenhuma imagem, texto, código ou fonte destes sites é redistribuída. Para medir um site, rode /extrair-ds: o resultado fica só no seu computador.",
+  "fontes": [
+    {
+      "nome": "Lusion",
+      "url": "https://lusion.co/",
+      "tipo": "Estúdio de 3D e web interativa (19 projetos)"
+    },
+    {
+      "nome": "DesignRush · Best Futuristic Website Designs",
+      "url": "https://www.designrush.com/best-designs/websites/futuristic",
+      "tipo": "Galeria premiada (7 designs em nov/2026)"
+    }
+  ],
+  "referencias": [
+    {
+      "id": "lusion",
+      "nome": "Lusion",
+      "url": "https://lusion.co/",
+      "fonte": "https://lusion.co/projects",
+      "autoria": "Lusion (Bristol, Reino Unido)",
+      "categoria": "Estúdio criativo",
+      "padroes": [
+        "página clara, fundo branco",
+        "palco 3D emoldurado com cantos grandes",
+        "tipografia grotesca grande e fina",
+        "botões em pílula grafite e claros",
+        "marcadores + nas bordas",
+        "loader com contador"
+      ],
+      "modelo": "studio-3d-light",
+      "template": "studio-3d-light",
+      "slug_sugerido": "ref-lusion"
+    },
+    {
+      "id": "takamo",
+      "nome": "Takamo Universe",
+      "url": "https://visuable.co/case-study/takamo-universe",
+      "fonte": "https://www.designrush.com/best-designs/websites/takamo-universe-website-design",
+      "autoria": "Visuable (Londres)",
+      "categoria": "Entretenimento",
+      "padroes": [
+        "tela preta com naves pintadas",
+        "um único acento ciano elétrico",
+        "títulos Bebas Neue e rótulos Exo espaçados",
+        "campos de estrelas e nebulosas em loop",
+        "grade de facções do universo"
+      ],
+      "modelo": "cinematic-sci-fi",
+      "template": "cinematic-sci-fi",
+      "slug_sugerido": "ref-takamo"
+    },
+    {
+      "id": "databahn",
+      "nome": "DataBahn",
+      "url": "https://www.databahn.ai/",
+      "fonte": "https://www.designrush.com/best-designs/websites/databahn-website-design",
+      "autoria": "Flowtrix (Bengaluru)",
+      "categoria": "IA / B2B",
+      "padroes": [
+        "azuis profundos e pretos",
+        "ciano e teal como acento",
+        "cards modulares para informação densa",
+        "brilhos e gráficos radiais de fluxo de dados"
+      ],
+      "modelo": "futuristic-tech",
+      "template": "tech-product",
+      "slug_sugerido": "ref-databahn"
+    },
+    {
+      "id": "nature-beyond",
+      "nome": "Nature Beyond Technology",
+      "url": "https://nature-beyond.tech/",
+      "fonte": "https://www.designrush.com/best-designs/websites/nature-beyond-technology-website-design",
+      "autoria": "Ronce Bleue (Lyon)",
+      "categoria": "Ciência / storytelling de dados",
+      "padroes": [
+        "fundo preto monocromático",
+        "árvore em partículas e wireframe",
+        "grade de precisão e colchetes de mira",
+        "módulos revelados na rolagem (00/07)"
+      ],
+      "modelo": "bio-data-mono",
+      "template": "bio-data-mono",
+      "slug_sugerido": "ref-nature-beyond"
+    },
+    {
+      "id": "glix",
+      "nome": "GLIX Studio",
+      "url": "https://glix.studio/",
+      "fonte": "https://www.designrush.com/best-designs/websites/glix-studio-website-design",
+      "autoria": "Nockta",
+      "categoria": "Moda / experimental",
+      "padroes": [
+        "glitch art e interface retrô de sistema antigo",
+        "verde neon e sombras duras",
+        "tipografia pixelada",
+        "navegação fragmentada de propósito"
+      ],
+      "modelo": "retro-glitch",
+      "template": "retro-glitch",
+      "slug_sugerido": "ref-glix",
+      "observacao": "Em nov/2026 o endereço redireciona para a loja da marca; o design premiado pode não estar mais no ar."
+    },
+    {
+      "id": "moulds-and-more",
+      "nome": "Moulds & More",
+      "url": "",
+      "fonte": "https://www.designrush.com/best-designs/websites/moulds-and-more-website-design",
+      "autoria": "WD Strategies",
+      "categoria": "Engenharia",
+      "padroes": [
+        "interface escura inspirada em carros esportivos",
+        "produto no centro",
+        "molduras retangulares coloridas separando conteúdo"
+      ],
+      "modelo": "futuristic-tech",
+      "template": "tech-product",
+      "slug_sugerido": "ref-moulds",
+      "observacao": "A galeria não informa o endereço do site."
+    },
+    {
+      "id": "bear-classes",
+      "nome": "Bear Classes",
+      "url": "",
+      "fonte": "https://www.designrush.com/best-designs/websites/bear-classes-website-design",
+      "autoria": "URich",
+      "categoria": "Educação",
+      "padroes": [
+        "gradientes azuis digitais",
+        "blocos 3D vetoriais",
+        "tipografia branca com toques de vermelho"
+      ],
+      "modelo": "immersive-3d",
+      "template": "immersive-3d-studio",
+      "slug_sugerido": "ref-bear-classes",
+      "observacao": "A galeria não informa o endereço do site."
+    },
+    {
+      "id": "alex-gurghis",
+      "nome": "Alex Gurghis",
+      "url": "",
+      "fonte": "https://www.designrush.com/best-designs/websites/alex-gurghis-website-design",
+      "autoria": "Alex Gurghis",
+      "categoria": "Portfólio",
+      "padroes": [
+        "tema escuro de carro de luxo",
+        "rolagem horizontal e vertical combinadas",
+        "estudos de caso em tela cheia"
+      ],
+      "modelo": "immersive-3d",
+      "template": "immersive-3d-studio",
+      "slug_sugerido": "ref-alex-gurghis",
+      "observacao": "A galeria não informa o endereço do site."
+    }
+  ]
+}

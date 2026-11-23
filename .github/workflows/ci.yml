@@ -1,0 +1,103 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    name: Validar repositório
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Skills, plugin, design systems, README
+        run: python tests/validate_repo.py
+      - name: Sintaxe dos scripts bash
+        run: bash -n install.sh && bash -n uninstall.sh
+      - name: ShellCheck
+        run: shellcheck --severity=warning install.sh uninstall.sh
+
+  ponta-a-ponta:
+    name: Instalar, criar site e desinstalar (Python ${{ matrix.python }})
+    needs: validar
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python tests/test_install.py
+
+  instalar-unix:
+    name: Instalação (${{ matrix.os }})
+    needs: validar
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar a partir do clone
+        run: bash install.sh --no-open
+      - name: Conferir arquivos
+        run: |
+          test -f "$HOME/.claude/skills/criar-site/SKILL.md"
+          test -f "$HOME/.codex/skills/novyra/agents/openai.yaml"
+          test -f "$HOME/.agents/skills/extrair-ds/SKILL.md"
+          test -f "$HOME/Novyra/novyra.html"
+          ! grep -q '{{RAIZ}}' "$HOME/.claude/skills/criar-site/SKILL.md"
+          python -c "import PIL, playwright; print('deps ok')"
+      - name: Reinstalar (idempotente)
+        run: bash install.sh --no-open --skip-deps
+      - name: Desinstalar
+        run: |
+          bash uninstall.sh
+          test ! -e "$HOME/.claude/skills/criar-site"
+          test ! -e "$HOME/Novyra/scripts"
+
+  instalar-windows:
+    name: Instalação (Windows PowerShell 5.1)
+    needs: validar
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar como "irm | iex" (texto do script, sem pip)
+        shell: powershell
+        run: |
+          $env:NOVYRA_NO_OPEN = '1'; $env:NOVYRA_SKIP_DEPS = '1'
+          Get-Content .\install.ps1 -Raw | Invoke-Expression
+      - name: Instalar a partir do clone
+        shell: powershell
+        run: |
+          $env:NOVYRA_NO_OPEN = '1'
+          .\install.ps1
+      - name: Conferir arquivos
+        shell: powershell
+        run: |
+          foreach ($p in "$HOME\.claude\skills\criar-site\SKILL.md", "$HOME\.codex\skills\novyra\SKILL.md", "$HOME\Novyra\novyra.html") {
+            if (-not (Test-Path $p)) { throw "faltando: $p" }
+          }
+      - name: Desinstalar
+        shell: powershell
+        run: |
+          .\uninstall.ps1
+          if (Test-Path "$HOME\.claude\skills\criar-site") { throw 'skill nao removida' }

@@ -1,0 +1,189 @@
+/* ==========================================================================
+   styles.css — todo o CSS do site mora aqui (nada inline no HTML)
+   Ordem: 1. tokens  2. reset  3. fundo  4. layout  5. regiões  6. tags tipadas
+   ========================================================================== */
+
+/* 1. Tokens do design system (preencher com cores amostradas da referência) */
+:root {
+  /* cores medidas na arte (amostrar_cores.py) */
+  --bg: #02030a;
+  --bg-2: #04050c;
+  --surface: #0f1225;
+  --surface-2: #181e3c;
+  --line: #2d355d;
+  --indigo: #434b7a;
+  --lavanda: #7b81af;
+  --glow: #fbfbf8;
+  --estrela: #fef9e2;
+  /* identidade NOVYRA (Future Lab) aplicada sobre a paleta da arte */
+  --violeta: #8757ff;
+  --ciano: #20d9f5;
+  --magenta: #d946ef;
+  --prata: #e5e7f0;
+  --text: #eef0fb;
+  --text-muted: #a7b0c4;
+  --accent: var(--violeta);
+  --on-accent: #ffffff;
+  --border: rgba(123, 129, 175, 0.22);
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --shadow-md: 0 24px 60px -24px rgba(67, 75, 122, 0.7);
+  --glow-md: 0 0 40px rgba(135, 87, 255, 0.45);
+
+  --font-title: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 40px;
+  --space-6: 72px;
+  --container: 1200px;
+}
+
+/* 2. Reset curto */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html, body { min-height: 100%; }
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+img, svg, video { display: block; max-width: 100%; }
+button, input { font: inherit; color: inherit; }
+a { color: inherit; text-decoration: none; }
+
+/* 3. Fundo (etapa 2): a arte é a camada de fundo; o véu escurece só onde entra texto */
+.bg-arte {
+  position: fixed; inset: 0; z-index: -2;
+  background: var(--bg) url("crops/vortex.jpg") center top / cover no-repeat;
+}
+.bg-veu {
+  position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: transparent;
+}
+@media (min-width: 1024px), (min-width: 700px) and (orientation: landscape) {
+  /* telas largas: a arte ocupa a metade direita, com foco no buraco negro, e se dissolve no fundo */
+  .bg-arte { left: 44%; background-position: 50% 46%; }
+  .bg-veu {
+    left: 44%;
+    background:
+      linear-gradient(90deg, var(--bg) 0%, rgba(2, 3, 10, 0.55) 18%, rgba(2, 3, 10, 0) 42%),
+      linear-gradient(0deg, var(--bg) 0%, rgba(2, 3, 10, 0) 22%);
+  }
+}
+
+/* 4. Layout geral (etapa 3) */
+html { scroll-behavior: smooth; }
+body { line-height: 1.6; }
+.nav, main, .rodape { width: min(var(--container), calc(100% - 40px)); margin-inline: auto; }
+main { display: block; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+
+/* 5. Regiões do wireframe (etapa 3) */
+.nav { display: flex; align-items: center; gap: var(--space-4); padding: var(--space-4) 0; }
+.logo { display: inline-flex; align-items: center; gap: 10px; font: 700 18px var(--font-title); letter-spacing: 0.2em; }
+.logo-marca {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, var(--bg) 0 42%, var(--ciano) 46%, var(--violeta) 62%, transparent 72%);
+  box-shadow: var(--glow-md);
+}
+.nav-links { display: flex; gap: var(--space-2); margin-left: auto; }
+
+.hero { min-height: calc(100vh - 88px); display: flex; flex-direction: column; justify-content: center; gap: var(--space-4); max-width: 600px; padding: var(--space-5) 0 var(--space-6); }
+.brilho { background: linear-gradient(90deg, var(--violeta), var(--ciano) 55%, var(--magenta)); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 24px rgba(135, 87, 255, 0.45)); }
+.acoes { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+
+.cmd {
+  display: flex; align-items: center; gap: var(--space-3);
+  padding: 14px 18px; border-radius: var(--radius-md);
+  background: rgba(4, 5, 12, 0.78); border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  overflow-x: auto;
+}
+.cmd code { font-family: var(--font-mono); color: var(--text); overflow-wrap: anywhere; min-width: 0; }
+.hero > *, .secao > *, .card2 > * { min-width: 0; }
+.cmd-rot { flex: none; font: 500 11px var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ciano); }
+
+.secao { padding: var(--space-6) 0; display: grid; gap: var(--space-3); }
+.etapas { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--space-3); margin-top: var(--space-4); }
+.card {
+  padding: var(--space-4); border-radius: var(--radius-md);
+  background: linear-gradient(180deg, rgba(24, 30, 60, 0.75), rgba(15, 18, 37, 0.75));
+  border: 1px solid var(--border); box-shadow: var(--shadow-md);
+  backdrop-filter: blur(8px);
+  display: grid; gap: var(--space-2); align-content: start;
+}
+.num { font: 600 13px var(--font-mono); color: var(--ciano); }
+.agentes { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); margin-top: var(--space-4); max-width: 860px; }
+.card2 {
+  padding: var(--space-5); border-radius: var(--radius-lg);
+  background: rgba(15, 18, 37, 0.7); border: 1px solid var(--border);
+  backdrop-filter: blur(8px); display: grid; gap: var(--space-3);
+}
+.cmd-linha { font: 13px var(--font-mono); color: var(--ciano); padding: 10px 14px; border-radius: var(--radius-sm); background: rgba(2, 3, 10, 0.7); border: 1px solid var(--border); overflow-wrap: anywhere; }
+.estreito { max-width: 640px; }
+.instalar { display: grid; gap: var(--space-3); max-width: 860px; margin-top: var(--space-3); }
+.rodape { padding: var(--space-5) 0; border-top: 1px solid var(--border); }
+
+/* telas em pé (celular, tablet em pé): a arte fica atrás do hero, como na referência */
+@media (max-width: 699px), (max-width: 1023px) and (orientation: portrait) {
+  .bg-veu { background: linear-gradient(180deg, rgba(2, 3, 10, 0) 0%, rgba(2, 3, 10, 0) 46%, rgba(2, 3, 10, 0.88) 70%, var(--bg) 86%); }
+  .hero { min-height: auto; padding-top: 52vh; }
+}
+/* larguras intermediárias em paisagem: texto à esquerda, mais estreito, sobre o véu */
+@media (min-width: 700px) and (max-width: 1023px) and (orientation: landscape) {
+  .hero { max-width: 56%; }
+  .h1 { font-size: clamp(40px, 6vw, 60px); }
+}
+@media (max-width: 1023px) {
+  .etapas { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .agentes { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .nav .btn2 { margin-left: auto; }
+  .hero { padding-top: 46vh; }
+}
+
+/* camadas A/B/C e modelos futuristas */
+.camadas { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-top: var(--space-4); }
+.selo { justify-self: start; font: 500 11px var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border); color: var(--prata); }
+.selo-a { border-color: rgba(32, 217, 245, 0.45); color: var(--ciano); }
+.selo-b { border-color: rgba(135, 87, 255, 0.55); color: #b59bff; }
+.selo-c { border-color: rgba(217, 70, 239, 0.5); color: #e98af6; }
+.modelos { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-3); margin-top: var(--space-4); }
+.paleta { display: flex; height: 44px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border); }
+.paleta span { flex: 1; }
+.p-novyra-1 { background: #080b16; } .p-novyra-2 { background: #8757ff; } .p-novyra-3 { background: #20d9f5; } .p-novyra-4 { background: #d946ef; }
+.p-imersivo-1 { background: #080d18; } .p-imersivo-2 { background: #38bdf8; } .p-imersivo-3 { background: #c6f1ff; } .p-imersivo-4 { background: #172a43; }
+.p-scifi-1 { background: #05070c; } .p-scifi-2 { background: #20d9f5; } .p-scifi-3 { background: #8ceeff; } .p-scifi-4 { background: #172432; }
+.p-tech-1 { background: #06101c; } .p-tech-2 { background: #19c6cf; } .p-tech-3 { background: #6ae5e0; } .p-tech-4 { background: #14283a; }
+.credito { margin-top: var(--space-2); }
+@media (max-width: 1023px) {
+  .camadas { grid-template-columns: 1fr; }
+  .modelos { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+}
+
+/* 6. Tags tipadas (etapa 3) */
+.h1 { font: 600 clamp(44px, 6.4vw, 84px)/1.02 var(--font-title); letter-spacing: -0.035em; }
+.h2 { font: 600 clamp(30px, 3.6vw, 46px)/1.1 var(--font-title); letter-spacing: -0.025em; max-width: 760px; }
+.h3 { font: 600 18px/1.25 var(--font-title); }
+.t1 { font-size: 18px; color: var(--text-muted); }
+.t2 { font-size: 14px; color: var(--text-muted); }
+.t3 { font: 500 12px var(--font-mono); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ciano); }
+.btn, .btn2, .lnk { display: inline-flex; align-items: center; transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease, border-color 160ms ease; }
+.btn { padding: 13px 22px; border-radius: 999px; background: var(--accent); color: var(--on-accent); font-weight: 600; box-shadow: var(--glow-md); }
+.btn:hover { background: #9a70ff; box-shadow: 0 0 56px rgba(135, 87, 255, 0.7); }
+.btn2 { padding: 12px 20px; border-radius: 999px; border: 1px solid var(--border); background: rgba(15, 18, 37, 0.6); color: var(--text); font-weight: 500; }
+.btn2:hover { border-color: var(--ciano); }
+.lnk { padding: 8px 12px; border-radius: 999px; color: var(--text-muted); font-size: 14px; }
+.lnk:hover { color: var(--text); }
+.btn:focus-visible, .btn2:focus-visible, .lnk:focus-visible, .logo:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

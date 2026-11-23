@@ -1,0 +1,65 @@
+/* ==========================================================================
+   componentes.css — componentes do design system, só com tokens (tokens.css).
+   Ponto de partida gerado; refine com os estados medidos na fonte (ver catálogo).
+   ========================================================================== */
+
+/* tags tipadas (mesmos nomes do wireframe do /criar-site) */
+.h1, .h2, .h3 { font-family: var(--font-title); color: var(--text); }
+.h1 { font-size: var(--fs-h1); font-weight: var(--fw-h1); line-height: var(--lh-h1); letter-spacing: var(--ls-h1); }
+.h2 { font-size: var(--fs-h2); font-weight: var(--fw-h2); line-height: var(--lh-h2); letter-spacing: var(--ls-h2); }
+.h3 { font-size: var(--fs-h3); font-weight: var(--fw-h3); line-height: var(--lh-h3); letter-spacing: var(--ls-h3); }
+.t1, .t2, .t3 { font-family: var(--font-body); }
+.t1 { font-size: var(--fs-t1); font-weight: var(--fw-t1); line-height: var(--lh-t1); letter-spacing: var(--ls-t1); color: var(--text); }
+.t2 { font-size: var(--fs-t2); font-weight: var(--fw-t2); line-height: var(--lh-t2); letter-spacing: var(--ls-t2); color: var(--text-muted); }
+.t3 { font-size: var(--fs-t3); font-weight: var(--fw-t3); line-height: var(--lh-t3); letter-spacing: var(--ls-t3); color: var(--text-muted); }
+
+/* botões: .btn primário, .btn2 secundário, .lnk link de navegação */
+.btn, .btn2, .lnk {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-family: var(--font-body); font-size: var(--fs-t1); font-weight: 500; line-height: 1;
+  border: 1px solid transparent; cursor: pointer; text-decoration: none;
+  transition: background-color var(--dur-base) var(--ease), color var(--dur-base) var(--ease),
+              border-color var(--dur-base) var(--ease), box-shadow var(--dur-base) var(--ease),
+              transform var(--dur-fast) var(--ease);
+}
+.btn  { padding: var(--space-3) var(--space-5); border-radius: var(--radius-pill); background: var(--accent); color: var(--on-accent); }
+.btn2 { padding: var(--space-3) var(--space-5); border-radius: var(--radius-pill); background: var(--surface); color: var(--text); border-color: var(--border); }
+.lnk  { padding: var(--space-2) var(--space-3); border-radius: var(--radius-pill); background: transparent; color: var(--text-muted); }
+.btn:hover, .btn.is-hover   { filter: brightness(1.12); }
+.btn2:hover, .btn2.is-hover { border-color: var(--text-muted); }
+.lnk:hover, .lnk.is-hover   { color: var(--text); background: var(--surface); }
+.btn:focus-visible, .btn2:focus-visible, .lnk:focus-visible, .in:focus-visible,
+.btn.is-focus, .btn2.is-focus, .lnk.is-focus, .in.is-focus { outline: 1px solid #20d9f5; outline-offset: 2px; }
+.btn:disabled, .btn2:disabled, .is-disabled { opacity: 0.45; cursor: not-allowed; filter: none; }
+
+/* campo */
+.in {
+  width: 100%; padding: var(--space-3) var(--space-4);
+  font: inherit; font-size: var(--fs-t1); color: var(--text);
+  background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md);
+  transition: border-color var(--dur-base) var(--ease);
+}
+.in::placeholder { color: var(--text-muted); }
+
+/* selo */
+.selo {
+  display: inline-flex; align-items: center; padding: 2px var(--space-3);
+  font-size: var(--fs-t2); color: var(--text); background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-pill);
+}
+
+/* card */
+.card {
+  display: flex; flex-direction: column; gap: var(--space-3);
+  padding: var(--space-6); background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-md);
+  transition: transform var(--dur-base) var(--ease), border-color var(--dur-base) var(--ease);
+}
+.card:hover, .card.is-hover { border-color: var(--text-muted); }
+
+/* nav */
+.nav {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--space-5);
+  padding: var(--space-4) var(--space-6); background: var(--bg); border-bottom: 1px solid var(--border);
+}
+.nav-links { display: flex; gap: var(--space-2); }

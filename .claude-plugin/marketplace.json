@@ -1,0 +1,14 @@
+{
+  "name": "novyra",
+  "owner": { "name": "Krlos Robertt", "url": "https://github.com/carlos-dataengineer" },
+  "metadata": { "description": "NOVYRA: imagem ou ideia vira site HTML + CSS com Claude Code e Codex." },
+  "plugins": [
+    {
+      "name": "novyra",
+      "source": "./",
+      "description": "Imagem ou ideia vira site HTML + CSS em 5 etapas com aprovação.",
+      "version": "0.2.0",
+      "category": "design"
+    }
+  ]
+}
