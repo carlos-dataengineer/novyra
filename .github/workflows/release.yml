@@ -29,7 +29,8 @@ jobs:
           zip -r "dist/novyra-${GITHUB_REF_NAME}.zip" skills runtime scripts install.sh install.ps1 uninstall.sh uninstall.ps1 VERSION LICENSE NOTICE README.md README.en.md -x '*/__pycache__/*' 'runtime/sites/*'
       - name: Notas da versão a partir do CHANGELOG
         run: |
-          awk -v v="$(cat VERSION)" '$0 ~ "^## \[" v "\]" {f=1; next} /^## \[/ {f=0} f' CHANGELOG.md > dist/notas.md
+          awk -v v="$(cat VERSION)" 'index($0, "## [" v "]")==1 {f=1; next} index($0, "## [")==1 {f=0} f' CHANGELOG.md > dist/notas.md
+          test -s dist/notas.md || { echo "Notas vazias: o CHANGELOG não tem a seção ## [$(cat VERSION)]"; exit 1; }
       - name: Criar release
         env:
           GH_TOKEN: ${{ github.token }}
